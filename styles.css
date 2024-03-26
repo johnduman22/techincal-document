@@ -8,6 +8,9 @@
     list-style-type: circle;
 }
 
-#mainBar{
+#mainBar, #header{
     transition: 0.4s;
 }
+
+
+

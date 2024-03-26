@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e5aaff80e9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body class="bg-slate-50">
+<body id="body" class="bg-slate-50">
     <nav id="mainBar" class="bg-slate-500 w-full h-20 fixed top-0">
         <div class="ml-96 flex justify-between">
+            <div id="darkMode" class="flex items-center">
             <h2 class="py-6 text-2xl text-stone-100 font-thin">Technical Documentation</h2>
+                <!-- <svg id="active" onclick="activeButton()" class="size-10 mt-2 ml-5 hidden cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128H192c-70.7 0-128-57.3-128-128s57.3-128 128-128H384zM576 256c0-106-86-192-192-192H192C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192zM192 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/></svg> -->
+                <svg id="active" onclick="activeButton()" class="size-10 mt-2 ml-5 hidden cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#ffffff" d="M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128H192c-70.7 0-128-57.3-128-128s57.3-128 128-128H384zM576 256c0-106-86-192-192-192H192C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192zM192 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/></svg>
+                <svg id="unactive" onclick="unactiveButton()" class="size-10 mt-2 ml-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M192 64C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192s-86-192-192-192H192zm192 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+               
+            </div>
             <ul class="flex">
                 <li class="p-7" ><a class="text-stone-100 font-thin" href="#">Home</a></li>
                 <li class="p-7" ><a class="text-stone-100 font-thin" href="#">About</a></li>
@@ -19,8 +26,8 @@
             </ul>
         </div>
     </nav>
-    <nav class="fixed w-72 h-full top-0 left-0 border-r border-black bg-slate-200" id="navBar">
-        <header class="border-b border-black p-5 h-20 text-3xl bg-slate-300 text-center">JS Documentation</header>
+    <nav id="navBar" class="fixed w-72 h-full top-0 left-0 border-r border-black bg-slate-200">
+        <header id="header" class="border-b border-black p-5 h-20 text-3xl bg-slate-300 text-center"><a href="index.html">JS Documentation</a></header>
         <ul>
             <li class="p-2"><a class="block mx-4" href="#">Introduction</a></li>
             <li class="border-t p-2 border-black"><a class="block mx-4" href="#What_you_should_already_know">What you should already know</a></li>
@@ -38,8 +45,8 @@
             <li class="border-y p-2 border-black"><a class="block mx-4" href="#Reference">Reference</a></li>
         </ul>
     </nav>
-    <main class="ml-96 mt-20 px-7 py-6 text-neutral-600 w-10/12 max-w-7xl">
-        <section>
+    <main id="main" class="ml-96 mt-20 px-7 py-6 text-neutral-600 w-10/12 max-w-7xl">
+        <section id="section1">
             <header id="Introduction" class="text-3xl">Introduction</header>
             <article class="mt-5 ml-5">
                 <p class="mb-5">
@@ -54,7 +61,7 @@
                 </ul>
             </article>
         </section>
-        <section>
+        <section id="section2">
             <header class="text-3xl">What you should already know</header>
             <article class="mt-5 ml-5">
                 <p>
@@ -67,7 +74,7 @@
                 </ul>
             </article>
         </section>
-        <section>
+        <section id="section3">
             <header class="text-3xl">JavaScript and Java</header>
             <article class="mt-5 ml-5">
                 <p id="Hello_world" class="mb-5">
@@ -81,13 +88,13 @@
                 </p>
             </article>
         </section>
-        <section>
+        <section id="section4">
             <header class="text-3xl">Hello World</header>
             <article class="mt-5 ml-5">
                 <p>
                     To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:   
                 </p>
-                <code class="ml-5 mt-4 p-5 whitespace-pre-line bg-slate-100 block rounded-md">function greetMe(yourName) { alert("Hello " + yourName); } 
+                <code id="code1" class="ml-5 mt-4 p-5 whitespace-pre-line bg-slate-200 block rounded-md">function greetMe(yourName) { alert("Hello " + yourName); } 
                 greetMe("World");
                 </code>
                 <p id="Declaring_variables" class="mt-4 mb-3">
@@ -95,7 +102,7 @@
                 </p>
             </article>
         </section>
-        <section>
+        <section id="section5">
             <header class="text-3xl">Variables</header>
             <article class="mt-5 ml-5">
                 <p class="mb-5">
@@ -109,45 +116,45 @@
                 </p>
             </article>
         </section>
-        <section>
+        <section id="section6">
             <header class="text-3xl">Declaring variables</header>
             <article class="mt-5 ml-5">
                 <p class="mb-5">You can declare a variable in three ways:</p>
                 <p class="mb-4">With the keyword var. For example,</p>
-                <code class="ml-5 mt-4 p-5 bg-slate-100 block rounded-md">var x = 42.</code>
+                <code id="code2" class="ml-5 mt-4 p-5 bg-slate-200 block rounded-md">var x = 42.</code>
                 <p class="my-5">This syntax can be used to declare both local and global variables.</p>
                 <p class="mb-5">By simply assigning it a value. For example,</p>
-                <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">x = 42.</code>
+                <code id="code3" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">x = 42.</code>
                 <p id="Variable_scope" class="mb-4">
                     This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.  
                 </p>
                 <p>
                     With the keyword let. For example,
                 </p>
-                <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">let y = 13.</code>
-                <p class="mb-4">
+                <code id="code4" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">let y = 13.</code>
+                <p class="mb-5">
                     This syntax can be used to declare a block scope local variable. See Variable scope below.
                 </p>
             </article>
         </section>
-        <section>
+        <section id="section7">
             <header class="text-3xl">Variable scope</header>
             <article class="mt-5 ml-5">
-                <p>
+                <p id="Global_Variables" class="mb-5">
                     When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function. 
                 </p>
-                <p>
+                <p class="mb-5">
                     JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement. 
                 </p>
-                <code  id="Global_Variables" class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">if (true) { var x = 5; } console.log(x); // 5</code>
-                <p>
+                <code id="code5" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">if (true) { var x = 5; } console.log(x); // 5</code>
+                <p id="Constants">
                     This behavior changes, when using the let declaration introduced in ECMAScript 2015. 
                 </p>
-                <code id="Constants" class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-100 block rounded-md">if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+                <code id="code6" class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-200 block rounded-md">if (true) { let y = 5; } console.log(y); // ReferenceError: y is
                 not defined</code>
             </article>
         </section>
-        <section>
+        <section id="section8">
             <header id="Constants" class="text-3xl">Global variables</header>
             <article class="mt-5 ml-5">
                 <p class="mb-5">
@@ -158,13 +165,13 @@
                 </p>
             </article>
         </section>
-        <section>
+        <section id="section9">
             <header class="text-3xl">Constants</header>
             <article class="mt-5 ml-5">
                 <p class="mb-5">
                     You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters. 
                 </p>
-                <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">const PI = 3.14;</code>
+                <code id="code7" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">const PI = 3.14;</code>
                 <p class="mb-5">
                     A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.
                 </p>
@@ -174,18 +181,18 @@
                 <p class="mb-4">
                     You cannot declare a constant with the same name as a function or variable in the same scope. For example: 
                 </p>
-                <code id="Data_types" class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-100 block rounded-md">// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+                <code id="code8" id="Data_types" class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-200 block rounded-md">// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
                 WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
                 //statements }
                 </code>
-                <p>
+                <p id="Data_types">
                     However, object attributes are not protected, so the following statement is executed without problems. 
                 </p>
-                <code class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-100 block rounded-md">const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+                <code id="code9" class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-200 block rounded-md">const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
                 "otherValue";
                 </code>
             </article>
-            <section>
+            <section id="section10">
                 <header class="text-3xl">Data types</header>
                 <article class="mt-5 ml-5">
                     <p class="mb-4">
@@ -210,13 +217,13 @@
                 </article>
             </section>
         </section>
-        <section>
+        <section id="section11">
             <header class="text-3xl">if...else statement</header>
                 <article class="mt-5 ml-5">
                     <p>
                         Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
                     </p>
-                    <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">if (condition) { statement_1; } else { statement_2; }
+                    <code id="code10" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">if (condition) { statement_1; } else { statement_2; }
                     </code>
                     <p class="mb-5">
                         condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.
@@ -224,34 +231,34 @@
                     <p class="mb-5">
                         You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
                     </p>
-                    <code class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-100 block rounded-md">if (condition_1) { statement_1; } else if (condition_2) {
+                    <code id="code11" class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-200 block rounded-md">if (condition_1) { statement_1; } else if (condition_2) {
                         statement_2; } else if (condition_n) { statement_n; } else {
                         statement_last; }</code>
                     <p>
                         In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:
                     </p>
-                    <code class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-100 block rounded-md">if (condition) { statement_1_runs_if_condition_is_true;
+                    <code id="code12" class="ml-5 my-4 p-5 whitespace-pre-line bg-slate-200 block rounded-md">if (condition) { statement_1_runs_if_condition_is_true;
                         statement_2_runs_if_condition_is_true; } else {
                         statement_3_runs_if_condition_is_false;
                         statement_4_runs_if_condition_is_false; }
                     </code>
-                    <p>
+                    <p id="while_statement">
                         It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code: 
                     </p>
-                    <code id="while_statement" class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">if (x = y) { /* statements here */ }</code>
+                    <code id="code13" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">if (x = y) { /* statements here */ }</code>
                     <p>
                         If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example
                     </p>
-                    <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">if ((x = y)) { /* statements here */ }</code>
+                    <code id="code14" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">if ((x = y)) { /* statements here */ }</code>
                 </article>
         </section>
-        <section>
+        <section id="section12">
             <header class="text-3xl">while statement</header>
                 <article class="mt-5 ml-5">
                     <p>
                         A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows: 
                     </p>
-                    <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">while (condition) statemen</code>
+                    <code id="code15" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">while (condition) statemen</code>
                     <p class="mb-5">
                         If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
                     </p>
@@ -267,10 +274,10 @@
                     <p class="mb-5">
                         The following while loop iterates as long as n is less than three:
                     </p>
-                    <code id="Function_declarations" class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">
+                    <code id="code16" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">
                         var n = 0; var x = 0; while (n < 3) { n++; x += n; }
                     </code>
-                    <p class="my-4">
+                    <p id="Function_declarations" class="my-4">
                         With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:
                     </p>
                     <ul class="list-disc ml-10">
@@ -283,7 +290,7 @@
                     </p>
                 </article>
         </section>
-        <section>
+        <section id="section13">
             <header class="text-3xl">Function declarations</header>
                 <article class="mt-5 ml-5">
                     <p class="mb-4">
@@ -297,21 +304,21 @@
                     <p class="my-5">
                         For example, the following code defines a simple function named square: 
                     </p>
-                    <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">function square(number) { return number * number; }</code>
+                    <code id="code17" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">function square(number) { return number * number; }</code>
                     <p class="my-5">
                         The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function. 
                     </p>
-                    <code class="ml-5 my-4 p-5 bg-slate-100 block rounded-md">return number * number;</code>
+                    <code id="code18" class="ml-5 my-4 p-5 bg-slate-200 block rounded-md">return number * number;</code>
                     <p class="my-5">
                         The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function. 
                     </p>
-                    <code class="ml-5 mb-6 my-4 p-5 bg-slate-100 block rounded-md">return number * number;</code>
+                    <code id="code19" class="ml-5 mb-6 my-4 p-5 bg-slate-200 block rounded-md">return number * number;</code>
                     <p class="my-5">
                         Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function. 
                     </p>
                 </article>
         </section>
-        <section>
+        <section id="section14">
             <header id="Reference" class="text-3xl">Reference</header>
                 <article class="mt-5 ml-5">
                     <ul class="list-disc ml-10">
